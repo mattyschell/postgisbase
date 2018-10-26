@@ -1,0 +1,6 @@
+CREATE OR REPLACE FUNCTION gisbase.dummy()
+RETURNS VARCHAR AS $$
+BEGIN
+    RETURN 'X';
+END;
+$$ LANGUAGE plpgsql;
