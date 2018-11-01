@@ -1,0 +1,33 @@
+# Eclipse
+.classpath
+.settings
+.project
+bin
+
+### STS ###
+.apt_generated
+.factorypath
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+/out/
+# Cache of project
+.gradletasknamecache
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
+
+# Gradle
+build
+.gradle
+/build/
+gradle-app.setting
+!gradle-wrapper.jar
+
+# Node
+node_modules
+ui/node_modules

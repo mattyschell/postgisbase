@@ -1,0 +1,1 @@
+select dummy, dummy from gisbase.dummy();
