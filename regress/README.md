@@ -4,9 +4,10 @@ Modeled loosely on https://trac.osgeo.org/postgis/wiki/DevWikiPGRegress
 
 Also described here https://github.com/postgis/postgis/tree/svn-trunk/regress
 
-## Create a test and expected output
+## For Some Functionality: Create a test and expected output
 
-Tuples only, expanded output, unaligned, field separator is pipe
+Tuples only, expanded output, unaligned, field separator is pipe. The function
+dummy was previously compiled from functions/dummy.sql.   
 
     $ psql.exe -t -X -A -F\| -h localhost -U gis -d dmi -f regress/dummy.sql > regress/dummy_expected
 
@@ -16,7 +17,7 @@ Produces file dummy_expected with contents
 
 ## Run A Test
 
-Following the leaders again https://github.com/postgis/postgis/blob/svn-trunk/regress/run_test.pl
+Following our leaders again https://github.com/postgis/postgis/blob/svn-trunk/regress/run_test.pl
 
 Run the <testname>.sql test in gisbase@dmi on localhost, compare against <testname>_expected
 
@@ -24,7 +25,7 @@ Run the <testname>.sql test in gisbase@dmi on localhost, compare against <testna
 
 ## Run All Tests
 
-TBD.  Probably a dumb simple script goes here.
+    $ python regress/run_all_tests.py "regress/all_tests"
 
 
 

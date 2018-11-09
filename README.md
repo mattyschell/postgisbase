@@ -10,15 +10,20 @@ Database creation executes as the postgres superuser with trust authentication
     $ export PGBHOST="localhost"
     $ export PGBSUPERPASSWORD="BeMyDataBae!" 
     $ psql -h $PGBHOST -p 5432 -U postgres -v v1=$PGBSUPERPASSWORD -f ./setup/createdatabase.sql
-    $ ./functions/installfunctions.sh "$PGBHOST" "$PGBSUPERPASSWORD"
+    $ export PGPASSWORD=$PGBSUPERPASSWORD
+    $ ./functions/installfunctions.sh "$PGBHOST"
 
 # Unit Tests
 
-    See regress/README.md for the dirty details.  Run all tests cleanly like:
+    See regress/README.md for the dirty details.  Run all existing tests cleanly like:
 
-    $ <TBD dumb script of scripts here>
+   $ python regress/run_all_tests.py "regress/all_tests"
 
 # Integration Tests
 
-    Maybe?
+    Maybe
+
+# Teardown Testing Environment
+
+    Probably
 
