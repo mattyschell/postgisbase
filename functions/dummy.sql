@@ -3,4 +3,4 @@ RETURNS VARCHAR AS $$
 BEGIN
     RETURN 'X';
 END;
-$$ LANGUAGE plpgsql;
+$$ LANGUAGE plpgsql IMMUTABLE;

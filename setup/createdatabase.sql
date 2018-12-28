@@ -7,6 +7,7 @@ CREATE USER gis WITH password :'v1';
 GRANT ALL PRIVILEGES ON DATABASE dmi TO gis; 
 \connect dmi
 CREATE EXTENSION IF NOT EXISTS postgis;
+CREATE EXTENSION IF NOT EXISTS unaccent;
 -- because I know the pattern, this mimics my standard Oracle namespacing
 -- gis user is me
 -- gisbase acts like a package

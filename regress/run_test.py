@@ -73,9 +73,8 @@ class dossier(object):
     def getDirt(self
                ,content):
         
-        # expected test results should be input to getDirt
-        # the xx_expected files in the repo are clean
-        # tests (self) produce dirty dossiers        
+        # expected test results should be input to getDirt as clean content
+        # tests (self) produce dirty dossiers
         
         dirt = []
         for testline, expectedline in itertools.izip_longest(self.content, 
